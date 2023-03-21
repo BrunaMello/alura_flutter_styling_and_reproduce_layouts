@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../themes/theme_colors.dart';
+
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
 
@@ -10,11 +12,7 @@ class Header extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: <Color>[
-            Color.fromRGBO(103, 99, 234, 1),
-            Color.fromRGBO(155, 105, 254, 1),
-            Color.fromRGBO(195, 107, 255, 1),
-          ],
+          colors: ThemeColors.headerGradient,
         ),
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(10),
@@ -31,14 +29,10 @@ class Header extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: '\$',
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
                     children: <TextSpan>[
                       TextSpan(
                         text: '1000.00',
-                        style: TextStyle(
-                            fontSize: 28, fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ],
                   ),
@@ -50,10 +44,9 @@ class Header extends StatelessWidget {
                 //     fontWeight: FontWeight.bold,
                 //   ),
                 // ),
-                Text('Avaiable Balance',
-                    style: TextStyle(
-                      fontSize: 16,
-                    )),
+                Text(
+                  'Avaiable Balance',
+                ),
               ],
             ),
             Icon(

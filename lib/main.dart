@@ -1,4 +1,5 @@
 import 'package:alura_flutter_styling_and_reproduce_layouts/screens/home.dart';
+import 'package:alura_flutter_styling_and_reproduce_layouts/themes/my_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class _AlubankState extends State<Alubank> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Alubank',
+      theme: MyTheme,
       home: Home(),
     );
   }
